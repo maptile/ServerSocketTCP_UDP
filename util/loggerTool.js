@@ -1,8 +1,7 @@
-
-const winston = require('winston')
-const moment = require('moment')
-require('winston-daily-rotate-file')
-const conf = require('../config/config')
+const winston = require('winston');
+const moment = require('moment');
+require('winston-daily-rotate-file');
+const conf = require('../config/config');
 
 const transports = [
     new winston.transports.DailyRotateFile({
@@ -23,13 +22,13 @@ const transports = [
     new winston.transports.Console({
         colorize: true
     })
-]
+];
 
 const logger = winston.createLogger({
     // format: winston.format.json(),
     // defaultMeta: { timestamp: new Date() },
     transports: transports
-})
+});
 
 
 // if (process.env.NODE_ENV !== 'production') {
@@ -42,8 +41,8 @@ const log = async (service, level, msg) => {
         service: service,
         level: level,
         message: msg
-    })
-}   // end infoLog
+    });
+}; // end infoLog
 
 
-module.exports = { log }
+module.exports = { log };
