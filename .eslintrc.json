@@ -1,0 +1,49 @@
+{
+    "extends": ["eslint:recommended", "google"],
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "env": {
+        "node": true,
+        "es6": true
+    },
+    "rules": {
+        "arrow-parens": "off",
+        "block-spacing": ["off"],
+        "brace-style": ["off"],
+        "comma-dangle": ["off"],
+        "indent": ["off"],
+        "keyword-spacing": ["off"],
+        "max-len": ["warn", {
+            "code": 200,
+            "ignoreComments": true,
+            "ignoreStrings": true,
+            "ignoreTemplateLiterals": true,
+            "ignoreRegExpLiterals": true
+        }],
+        "no-console": "off",
+        "no-const-assign": "error",
+        "no-extra-bind": "error",
+        "no-invalid-this": ["off"],
+        "no-tabs": "error",
+        "no-undef": "error",
+        "no-unused-vars": ["error", {
+            "args": "after-used"
+        }],
+        "no-var": ["warn"],
+        "object-curly-spacing": ["off"],
+        "prefer-arrow-callback": "warn",
+        "prefer-const": "warn",
+        "require-jsdoc": ["off"],
+        "space-before-blocks": ["off"],
+        "space-before-function-paren": ["off", {
+            "anonymous": "always",
+            "named": "always",
+            "asyncArrow": "always"
+        }],
+        "spaced-comment": ["warn"]
+    },
+    "globals": {
+    }
+}
